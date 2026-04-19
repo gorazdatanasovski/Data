@@ -1,0 +1,5 @@
+blpapi
+xbbg
+polars
+pandas
+pyarrow

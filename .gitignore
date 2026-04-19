@@ -1,0 +1,5 @@
+# .gitignore
+__pycache__/
+*.parquet
+.env
+venv/
