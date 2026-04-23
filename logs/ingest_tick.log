@@ -1,0 +1,269 @@
+2026-04-23 18:41:35 | INFO     | ingest_tick | ========================================================================
+2026-04-23 18:41:35 | INFO     | ingest_tick | Tick ingestion pipeline started.
+2026-04-23 18:41:35 | INFO     | ingest_tick | Bloomberg window: last 139 calendar days.
+2026-04-23 18:41:35 | INFO     | ingest_tick | Instruments: ['SPX Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:41:35 | INFO     | ingest_tick | ========================================================================
+2026-04-23 18:41:35 | INFO     | ingest_tick | SPX Index | types=['BID', 'ASK'] | 2025-12-05 → 2026-04-23
+2026-04-23 18:41:36 | INFO     | xbbg.blp | PyEngine connected to Bloomberg
+2026-04-23 18:41:36 | ERROR    | ingest_tick | FAILED: SPX Index — Invalid argument: element 'types' not found
+Traceback (most recent call last):
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 194, in main
+    pull_tick_data(
+    ~~~~~~~~~~~~~~^
+        ticker     = entry["ticker"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix     = entry["prefix"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        tick_types = entry["tick_types"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 110, in pull_tick_data
+    df_raw = blp.bdtick(
+        ticker         = ticker,
+    ...<2 lines>...
+        types          = tick_types,
+    )
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1343, in wrapped
+    return asyncio.run(async_func(*args, **kwargs))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<string>", line 2, in abdtick
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1368, in _execute_generated_endpoint
+    raw = await arequest(
+          ^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1047, in arequest
+    result = await _run_request_middleware(context, _execute_request_terminal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 271, in _run_request_middleware
+    return await invoke(0, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 258, in invoke
+    return await terminal(current_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 821, in _execute_request_terminal
+    batch = await engine.request(context.params_dict)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xbbg._core.BlpValidationError: Invalid argument: element 'types' not found
+2026-04-23 18:41:36 | INFO     | ingest_tick | VIX Index | types=['BID', 'ASK'] | 2025-12-05 → 2026-04-23
+2026-04-23 18:41:36 | ERROR    | ingest_tick | FAILED: VIX Index — Invalid argument: element 'types' not found
+Traceback (most recent call last):
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 194, in main
+    pull_tick_data(
+    ~~~~~~~~~~~~~~^
+        ticker     = entry["ticker"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix     = entry["prefix"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        tick_types = entry["tick_types"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 110, in pull_tick_data
+    df_raw = blp.bdtick(
+        ticker         = ticker,
+    ...<2 lines>...
+        types          = tick_types,
+    )
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1343, in wrapped
+    return asyncio.run(async_func(*args, **kwargs))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<string>", line 2, in abdtick
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1368, in _execute_generated_endpoint
+    raw = await arequest(
+          ^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1047, in arequest
+    result = await _run_request_middleware(context, _execute_request_terminal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 271, in _run_request_middleware
+    return await invoke(0, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 258, in invoke
+    return await terminal(current_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 821, in _execute_request_terminal
+    batch = await engine.request(context.params_dict)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xbbg._core.BlpValidationError: Invalid argument: element 'types' not found
+2026-04-23 18:41:36 | INFO     | ingest_tick | NDX Index | types=['BID', 'ASK'] | 2025-12-05 → 2026-04-23
+2026-04-23 18:41:36 | ERROR    | ingest_tick | FAILED: NDX Index — Invalid argument: element 'types' not found
+Traceback (most recent call last):
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 194, in main
+    pull_tick_data(
+    ~~~~~~~~~~~~~~^
+        ticker     = entry["ticker"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix     = entry["prefix"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        tick_types = entry["tick_types"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 110, in pull_tick_data
+    df_raw = blp.bdtick(
+        ticker         = ticker,
+    ...<2 lines>...
+        types          = tick_types,
+    )
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1343, in wrapped
+    return asyncio.run(async_func(*args, **kwargs))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<string>", line 2, in abdtick
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1368, in _execute_generated_endpoint
+    raw = await arequest(
+          ^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1047, in arequest
+    result = await _run_request_middleware(context, _execute_request_terminal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 271, in _run_request_middleware
+    return await invoke(0, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 258, in invoke
+    return await terminal(current_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 821, in _execute_request_terminal
+    batch = await engine.request(context.params_dict)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xbbg._core.BlpValidationError: Invalid argument: element 'types' not found
+2026-04-23 18:41:36 | INFO     | ingest_tick | SPY US Equity | types=['TRADE', 'BID', 'ASK'] | 2025-12-05 → 2026-04-23
+2026-04-23 18:41:36 | ERROR    | ingest_tick | FAILED: SPY US Equity — Invalid argument: element 'types' not found
+Traceback (most recent call last):
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 194, in main
+    pull_tick_data(
+    ~~~~~~~~~~~~~~^
+        ticker     = entry["ticker"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix     = entry["prefix"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        tick_types = entry["tick_types"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 110, in pull_tick_data
+    df_raw = blp.bdtick(
+        ticker         = ticker,
+    ...<2 lines>...
+        types          = tick_types,
+    )
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1343, in wrapped
+    return asyncio.run(async_func(*args, **kwargs))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<string>", line 2, in abdtick
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1368, in _execute_generated_endpoint
+    raw = await arequest(
+          ^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1047, in arequest
+    result = await _run_request_middleware(context, _execute_request_terminal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 271, in _run_request_middleware
+    return await invoke(0, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 258, in invoke
+    return await terminal(current_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 821, in _execute_request_terminal
+    batch = await engine.request(context.params_dict)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xbbg._core.BlpValidationError: Invalid argument: element 'types' not found
+2026-04-23 18:41:36 | INFO     | ingest_tick | QQQ US Equity | types=['TRADE', 'BID', 'ASK'] | 2025-12-05 → 2026-04-23
+2026-04-23 18:41:36 | ERROR    | ingest_tick | FAILED: QQQ US Equity — Invalid argument: element 'types' not found
+Traceback (most recent call last):
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 194, in main
+    pull_tick_data(
+    ~~~~~~~~~~~~~~^
+        ticker     = entry["ticker"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix     = entry["prefix"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        tick_types = entry["tick_types"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py", line 110, in pull_tick_data
+    df_raw = blp.bdtick(
+        ticker         = ticker,
+    ...<2 lines>...
+        types          = tick_types,
+    )
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1343, in wrapped
+    return asyncio.run(async_func(*args, **kwargs))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\gorazd.atanasovski\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<string>", line 2, in abdtick
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1368, in _execute_generated_endpoint
+    raw = await arequest(
+          ^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 1047, in arequest
+    result = await _run_request_middleware(context, _execute_request_terminal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 271, in _run_request_middleware
+    return await invoke(0, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 258, in invoke
+    return await terminal(current_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorazd.atanasovski\Desktop\Data\.venv\Lib\site-packages\xbbg\blp.py", line 821, in _execute_request_terminal
+    batch = await engine.request(context.params_dict)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xbbg._core.BlpValidationError: Invalid argument: element 'types' not found
+2026-04-23 18:41:36 | INFO     | ingest_tick | ========================================================================
+2026-04-23 18:41:36 | ERROR    | ingest_tick | Tick ingestion completed with errors. Failed tickers: ['SPX Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:41:36 | INFO     | ingest_tick | ========================================================================

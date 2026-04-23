@@ -1,0 +1,76 @@
+2026-04-23 18:40:28 | INFO     | ingest_daily | ========================================================================
+2026-04-23 18:40:28 | INFO     | ingest_daily | Daily ingestion pipeline started.
+2026-04-23 18:40:28 | INFO     | ingest_daily | Instruments: ['SPX Index', 'SPXT Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:40:28 | INFO     | ingest_daily | ========================================================================
+2026-04-23 18:40:28 | INFO     | ingest_daily | Extracting daily series | ticker=SPX Index | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:40:28 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:40:28 | INFO     | xbbg.blp | PyEngine connected to Bloomberg
+2026-04-23 18:40:31 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987628981733400]: 123545 rows in 2305.1ms | securities=['SPX Index'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:40:31 | INFO     | ingest_daily | Received 123,545 raw long-format rows for SPX Index.
+2026-04-23 18:40:31 | INFO     | ingest_daily | Serialized 24,709 trading days | 1927-12-30 → 2026-04-23 | → spx_raw_inception_daily.parquet
+2026-04-23 18:40:31 | INFO     | ingest_daily | Extracting daily series | ticker=SPXT Index | fields=['PX_LAST']
+2026-04-23 18:40:31 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:40:32 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987631523515600]: 9226 rows in 595.7ms | securities=['SPXT Index'] fields=['PX_LAST']
+2026-04-23 18:40:32 | INFO     | ingest_daily | Received 9,226 raw long-format rows for SPXT Index.
+2026-04-23 18:40:32 | INFO     | ingest_daily | Serialized 9,226 trading days | 1989-09-11 → 2026-04-23 | → spxt_raw_inception_daily.parquet
+2026-04-23 18:40:32 | INFO     | ingest_daily | Extracting daily series | ticker=VIX Index | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:40:32 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:40:33 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987632162749600]: 36680 rows in 1171.0ms | securities=['VIX Index'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:40:33 | INFO     | ingest_daily | Received 36,680 raw long-format rows for VIX Index.
+2026-04-23 18:40:33 | INFO     | ingest_daily | Serialized 9,170 trading days | 1990-01-02 → 2026-04-23 | → vix_raw_inception_daily.parquet
+2026-04-23 18:40:33 | INFO     | ingest_daily | Extracting daily series | ticker=NDX Index | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:40:33 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:40:35 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987633373014100]: 41540 rows in 1753.7ms | securities=['NDX Index'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:40:35 | INFO     | ingest_daily | Received 41,540 raw long-format rows for NDX Index.
+2026-04-23 18:40:35 | INFO     | ingest_daily | Serialized 10,385 trading days | 1985-02-04 → 2026-04-23 | → ndx_raw_inception_daily.parquet
+2026-04-23 18:40:35 | INFO     | ingest_daily | Extracting daily series | ticker=SPY US Equity | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:40:35 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:40:36 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987635172400600]: 41825 rows in 1037.6ms | securities=['SPY US Equity'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:40:36 | INFO     | ingest_daily | Received 41,825 raw long-format rows for SPY US Equity.
+2026-04-23 18:40:36 | INFO     | ingest_daily | Serialized 8,365 trading days | 1993-01-29 → 2026-04-23 | → spy_raw_inception_daily.parquet
+2026-04-23 18:40:36 | INFO     | ingest_daily | Extracting daily series | ticker=QQQ US Equity | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:40:36 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:40:37 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987636250102200]: 34115 rows in 1274.4ms | securities=['QQQ US Equity'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:40:37 | INFO     | ingest_daily | Received 34,115 raw long-format rows for QQQ US Equity.
+2026-04-23 18:40:37 | INFO     | ingest_daily | Serialized 6,823 trading days | 1999-03-10 → 2026-04-23 | → qqq_raw_inception_daily.parquet
+2026-04-23 18:40:37 | INFO     | ingest_daily | ========================================================================
+2026-04-23 18:40:37 | INFO     | ingest_daily | Daily ingestion complete. All instruments serialized successfully.
+2026-04-23 18:40:37 | INFO     | ingest_daily | ========================================================================
+2026-04-23 18:41:39 | INFO     | ingest_daily | ========================================================================
+2026-04-23 18:41:39 | INFO     | ingest_daily | Daily ingestion pipeline started.
+2026-04-23 18:41:39 | INFO     | ingest_daily | Instruments: ['SPX Index', 'SPXT Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:41:39 | INFO     | ingest_daily | ========================================================================
+2026-04-23 18:41:39 | INFO     | ingest_daily | Extracting daily series | ticker=SPX Index | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:41:39 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:41:40 | INFO     | xbbg.blp | PyEngine connected to Bloomberg
+2026-04-23 18:41:42 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987700085707500]: 123545 rows in 2500.2ms | securities=['SPX Index'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:41:42 | INFO     | ingest_daily | Received 123,545 raw long-format rows for SPX Index.
+2026-04-23 18:41:42 | INFO     | ingest_daily | Serialized 24,709 trading days | 1927-12-30 → 2026-04-23 | → spx_raw_inception_daily.parquet
+2026-04-23 18:41:42 | INFO     | ingest_daily | Extracting daily series | ticker=SPXT Index | fields=['PX_LAST']
+2026-04-23 18:41:42 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:41:43 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987702749542100]: 9226 rows in 509.5ms | securities=['SPXT Index'] fields=['PX_LAST']
+2026-04-23 18:41:43 | INFO     | ingest_daily | Received 9,226 raw long-format rows for SPXT Index.
+2026-04-23 18:41:43 | INFO     | ingest_daily | Serialized 9,226 trading days | 1989-09-11 → 2026-04-23 | → spxt_raw_inception_daily.parquet
+2026-04-23 18:41:43 | INFO     | ingest_daily | Extracting daily series | ticker=VIX Index | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:41:43 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:41:44 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987703300062100]: 36680 rows in 866.8ms | securities=['VIX Index'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:41:44 | INFO     | ingest_daily | Received 36,680 raw long-format rows for VIX Index.
+2026-04-23 18:41:44 | INFO     | ingest_daily | Serialized 9,170 trading days | 1990-01-02 → 2026-04-23 | → vix_raw_inception_daily.parquet
+2026-04-23 18:41:44 | INFO     | ingest_daily | Extracting daily series | ticker=NDX Index | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:41:44 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:41:45 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987704207956700]: 41540 rows in 855.4ms | securities=['NDX Index'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST']
+2026-04-23 18:41:45 | INFO     | ingest_daily | Received 41,540 raw long-format rows for NDX Index.
+2026-04-23 18:41:45 | INFO     | ingest_daily | Serialized 10,385 trading days | 1985-02-04 → 2026-04-23 | → ndx_raw_inception_daily.parquet
+2026-04-23 18:41:45 | INFO     | ingest_daily | Extracting daily series | ticker=SPY US Equity | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:41:45 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:41:46 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987705107303500]: 41825 rows in 1073.7ms | securities=['SPY US Equity'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:41:46 | INFO     | ingest_daily | Received 41,825 raw long-format rows for SPY US Equity.
+2026-04-23 18:41:46 | INFO     | ingest_daily | Serialized 8,365 trading days | 1993-01-29 → 2026-04-23 | → spy_raw_inception_daily.parquet
+2026-04-23 18:41:46 | INFO     | ingest_daily | Extracting daily series | ticker=QQQ US Equity | fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:41:46 | INFO     | ingest_daily | Date range: 1900-01-01 → 2026-04-23
+2026-04-23 18:41:47 | INFO     | xbbg.blp | bloomberg //blp/refdata.HistoricalDataRequest [request_id=req-1776987706221898400]: 34115 rows in 1014.0ms | securities=['QQQ US Equity'] fields=['PX_OPEN', 'PX_HIGH', 'PX_LOW', 'PX_LAST', 'PX_VOLUME']
+2026-04-23 18:41:47 | INFO     | ingest_daily | Received 34,115 raw long-format rows for QQQ US Equity.
+2026-04-23 18:41:47 | INFO     | ingest_daily | Serialized 6,823 trading days | 1999-03-10 → 2026-04-23 | → qqq_raw_inception_daily.parquet
+2026-04-23 18:41:47 | INFO     | ingest_daily | ========================================================================
+2026-04-23 18:41:47 | INFO     | ingest_daily | Daily ingestion complete. All instruments serialized successfully.
+2026-04-23 18:41:47 | INFO     | ingest_daily | ========================================================================

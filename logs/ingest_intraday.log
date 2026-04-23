@@ -1,0 +1,430 @@
+2026-04-23 18:40:40 | INFO     | ingest_intraday | ========================================================================
+2026-04-23 18:40:40 | INFO     | ingest_intraday | Intraday bar ingestion pipeline started.
+2026-04-23 18:40:40 | INFO     | ingest_intraday | Bloomberg window: last 139 calendar days.
+2026-04-23 18:40:40 | INFO     | ingest_intraday | Intervals: ['1min', '2min', '3min', '5min', '10min', '15min', '30min', '1h', '2h', '4h']
+2026-04-23 18:40:40 | INFO     | ingest_intraday | Instruments: ['SPX Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:40:40 | INFO     | ingest_intraday | ========================================================================
+2026-04-23 18:40:40 | INFO     | ingest_intraday | ── SPX Index ──
+2026-04-23 18:40:40 | INFO     | ingest_intraday | [1min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:41 | INFO     | xbbg.blp | PyEngine connected to Bloomberg
+2026-04-23 18:40:44 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987641007323700]: 38361 rows in 3143.0ms | securities=None fields=None
+2026-04-23 18:40:44 | INFO     | ingest_intraday | [1min] Received 38,361 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:44 | INFO     | ingest_intraday | [1min] Serialized 38,361 bars | 2025-12-05 14:30:00 → 2026-04-22 20:19:00 | → spx_raw_inception_1min.parquet
+2026-04-23 18:40:44 | INFO     | ingest_intraday | [2min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:45 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987644317898000]: 19181 rows in 1238.3ms | securities=None fields=None
+2026-04-23 18:40:45 | INFO     | ingest_intraday | [2min] Received 19,181 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:45 | INFO     | ingest_intraday | [2min] Serialized 19,181 bars | 2025-12-05 14:30:00 → 2026-04-22 20:18:00 | → spx_raw_inception_2min.parquet
+2026-04-23 18:40:45 | INFO     | ingest_intraday | [3min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:46 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987645597442500]: 12819 rows in 879.7ms | securities=None fields=None
+2026-04-23 18:40:46 | INFO     | ingest_intraday | [3min] Received 12,819 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:46 | INFO     | ingest_intraday | [3min] Serialized 12,819 bars | 2025-12-05 14:30:00 → 2026-04-22 20:18:00 | → spx_raw_inception_3min.parquet
+2026-04-23 18:40:46 | INFO     | ingest_intraday | [5min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:47 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987646516279500]: 7673 rows in 539.1ms | securities=None fields=None
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [5min] Received 7,673 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [5min] Serialized 7,673 bars | 2025-12-05 14:30:00 → 2026-04-22 20:15:00 | → spx_raw_inception_5min.parquet
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [10min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:47 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987647094761700]: 3837 rows in 348.6ms | securities=None fields=None
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [10min] Received 3,837 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [10min] Serialized 3,837 bars | 2025-12-05 14:30:00 → 2026-04-22 20:10:00 | → spx_raw_inception_10min.parquet
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [15min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:47 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987647483103000]: 2621 rows in 325.8ms | securities=None fields=None
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [15min] Received 2,621 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [15min] Serialized 2,621 bars | 2025-12-05 14:30:00 → 2026-04-22 20:15:00 | → spx_raw_inception_15min.parquet
+2026-04-23 18:40:47 | INFO     | ingest_intraday | [30min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:48 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987647848390200]: 1311 rows in 241.5ms | securities=None fields=None
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [30min] Received 1,311 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [30min] Serialized 1,311 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → spx_raw_inception_30min.parquet
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [1h] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:48 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987648120903700]: 656 rows in 207.7ms | securities=None fields=None
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [1h] Received 656 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [1h] Serialized 656 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spx_raw_inception_1h.parquet
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [2h] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:48 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987648361588200]: 375 rows in 204.0ms | securities=None fields=None
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [2h] Received 375 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [2h] Serialized 375 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spx_raw_inception_2h.parquet
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [4h] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:48 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987648597103800]: 188 rows in 208.7ms | securities=None fields=None
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → spx_raw_inception_4h.parquet
+2026-04-23 18:40:48 | INFO     | ingest_intraday | ── VIX Index ──
+2026-04-23 18:40:48 | INFO     | ingest_intraday | [1min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:53 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987648835952800]: 73640 rows in 4949.0ms | securities=None fields=None
+2026-04-23 18:40:53 | INFO     | ingest_intraday | [1min] Received 73,640 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:53 | INFO     | ingest_intraday | [1min] Serialized 73,640 bars | 2025-12-05 08:15:00 → 2026-04-22 20:14:00 | → vix_raw_inception_1min.parquet
+2026-04-23 18:40:53 | INFO     | ingest_intraday | [2min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:55 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987653839417400]: 36874 rows in 1983.3ms | securities=None fields=None
+2026-04-23 18:40:55 | INFO     | ingest_intraday | [2min] Received 36,874 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:55 | INFO     | ingest_intraday | [2min] Serialized 36,874 bars | 2025-12-05 08:15:00 → 2026-04-22 20:13:00 | → vix_raw_inception_2min.parquet
+2026-04-23 18:40:55 | INFO     | ingest_intraday | [3min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:57 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987655873310100]: 24615 rows in 1751.9ms | securities=None fields=None
+2026-04-23 18:40:57 | INFO     | ingest_intraday | [3min] Received 24,615 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:57 | INFO     | ingest_intraday | [3min] Serialized 24,615 bars | 2025-12-05 08:15:00 → 2026-04-22 20:12:00 | → vix_raw_inception_3min.parquet
+2026-04-23 18:40:57 | INFO     | ingest_intraday | [5min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:58 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987657673872100]: 14828 rows in 1002.7ms | securities=None fields=None
+2026-04-23 18:40:58 | INFO     | ingest_intraday | [5min] Received 14,828 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:58 | INFO     | ingest_intraday | [5min] Serialized 14,828 bars | 2025-12-05 08:15:00 → 2026-04-22 20:10:00 | → vix_raw_inception_5min.parquet
+2026-04-23 18:40:58 | INFO     | ingest_intraday | [10min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:40:59 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987658716454700]: 7415 rows in 978.9ms | securities=None fields=None
+2026-04-23 18:40:59 | INFO     | ingest_intraday | [10min] Received 7,415 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:40:59 | INFO     | ingest_intraday | [10min] Serialized 7,415 bars | 2025-12-05 08:15:00 → 2026-04-22 20:05:00 | → vix_raw_inception_10min.parquet
+2026-04-23 18:40:59 | INFO     | ingest_intraday | [15min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:00 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987659727724900]: 4945 rows in 707.1ms | securities=None fields=None
+2026-04-23 18:41:00 | INFO     | ingest_intraday | [15min] Received 4,945 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:00 | INFO     | ingest_intraday | [15min] Serialized 4,945 bars | 2025-12-05 08:15:00 → 2026-04-22 20:00:00 | → vix_raw_inception_15min.parquet
+2026-04-23 18:41:00 | INFO     | ingest_intraday | [30min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:01 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987660467374100]: 2473 rows in 537.3ms | securities=None fields=None
+2026-04-23 18:41:01 | INFO     | ingest_intraday | [30min] Received 2,473 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:01 | INFO     | ingest_intraday | [30min] Serialized 2,473 bars | 2025-12-05 08:15:00 → 2026-04-22 19:45:00 | → vix_raw_inception_30min.parquet
+2026-04-23 18:41:01 | INFO     | ingest_intraday | [1h] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:01 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987661045051100]: 1238 rows in 466.8ms | securities=None fields=None
+2026-04-23 18:41:01 | INFO     | ingest_intraday | [1h] Received 1,238 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:01 | INFO     | ingest_intraday | [1h] Serialized 1,238 bars | 2025-12-05 08:15:00 → 2026-04-22 19:15:00 | → vix_raw_inception_1h.parquet
+2026-04-23 18:41:01 | INFO     | ingest_intraday | [2h] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:01 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987661543739000]: 667 rows in 454.3ms | securities=None fields=None
+2026-04-23 18:41:02 | INFO     | ingest_intraday | [2h] Received 667 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:02 | INFO     | ingest_intraday | [2h] Serialized 667 bars | 2025-12-05 08:15:00 → 2026-04-22 19:15:00 | → vix_raw_inception_2h.parquet
+2026-04-23 18:41:02 | INFO     | ingest_intraday | [4h] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:02 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987662037221800]: 381 rows in 406.7ms | securities=None fields=None
+2026-04-23 18:41:02 | INFO     | ingest_intraday | [4h] Received 381 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:02 | INFO     | ingest_intraday | [4h] Serialized 381 bars | 2025-12-05 08:15:00 → 2026-04-22 19:15:00 | → vix_raw_inception_4h.parquet
+2026-04-23 18:41:02 | INFO     | ingest_intraday | ── NDX Index ──
+2026-04-23 18:41:02 | INFO     | ingest_intraday | [1min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:07 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987662478029500]: 40742 rows in 5433.1ms | securities=None fields=None
+2026-04-23 18:41:07 | INFO     | ingest_intraday | [1min] Received 40,742 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:07 | INFO     | ingest_intraday | [1min] Serialized 40,742 bars | 2025-12-05 14:30:00 → 2026-04-22 20:44:00 | → ndx_raw_inception_1min.parquet
+2026-04-23 18:41:07 | INFO     | ingest_intraday | [2min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:09 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987667965695000]: 20418 rows in 1236.8ms | securities=None fields=None
+2026-04-23 18:41:09 | INFO     | ingest_intraday | [2min] Received 20,418 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:09 | INFO     | ingest_intraday | [2min] Serialized 20,418 bars | 2025-12-05 14:30:00 → 2026-04-22 20:44:00 | → ndx_raw_inception_2min.parquet
+2026-04-23 18:41:09 | INFO     | ingest_intraday | [3min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:10 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987669249218000]: 13581 rows in 1172.9ms | securities=None fields=None
+2026-04-23 18:41:10 | INFO     | ingest_intraday | [3min] Received 13,581 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:10 | INFO     | ingest_intraday | [3min] Serialized 13,581 bars | 2025-12-05 14:30:00 → 2026-04-22 20:42:00 | → ndx_raw_inception_3min.parquet
+2026-04-23 18:41:10 | INFO     | ingest_intraday | [5min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:10 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987670467514500]: 8149 rows in 487.9ms | securities=None fields=None
+2026-04-23 18:41:10 | INFO     | ingest_intraday | [5min] Received 8,149 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:10 | INFO     | ingest_intraday | [5min] Serialized 8,149 bars | 2025-12-05 14:30:00 → 2026-04-22 20:40:00 | → ndx_raw_inception_5min.parquet
+2026-04-23 18:41:10 | INFO     | ingest_intraday | [10min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:13 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987670999620100]: 4121 rows in 2504.4ms | securities=None fields=None
+2026-04-23 18:41:13 | INFO     | ingest_intraday | [10min] Received 4,121 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:13 | INFO     | ingest_intraday | [10min] Serialized 4,121 bars | 2025-12-05 14:30:00 → 2026-04-22 20:40:00 | → ndx_raw_inception_10min.parquet
+2026-04-23 18:41:13 | INFO     | ingest_intraday | [15min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:13 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987673538242700]: 2717 rows in 244.1ms | securities=None fields=None
+2026-04-23 18:41:13 | INFO     | ingest_intraday | [15min] Received 2,717 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:13 | INFO     | ingest_intraday | [15min] Serialized 2,717 bars | 2025-12-05 14:30:00 → 2026-04-22 20:30:00 | → ndx_raw_inception_15min.parquet
+2026-04-23 18:41:13 | INFO     | ingest_intraday | [30min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:13 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987673818506600]: 1405 rows in 174.0ms | securities=None fields=None
+2026-04-23 18:41:13 | INFO     | ingest_intraday | [30min] Received 1,405 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [30min] Serialized 1,405 bars | 2025-12-05 14:30:00 → 2026-04-22 20:30:00 | → ndx_raw_inception_30min.parquet
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [1h] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:14 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987674022890400]: 749 rows in 156.5ms | securities=None fields=None
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [1h] Received 749 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [1h] Serialized 749 bars | 2025-12-05 14:30:00 → 2026-04-22 20:30:00 | → ndx_raw_inception_1h.parquet
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [2h] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:14 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987674211760900]: 375 rows in 166.4ms | securities=None fields=None
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [2h] Received 375 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [2h] Serialized 375 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → ndx_raw_inception_2h.parquet
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [4h] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:14 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987674406066000]: 188 rows in 129.8ms | securities=None fields=None
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → ndx_raw_inception_4h.parquet
+2026-04-23 18:41:14 | INFO     | ingest_intraday | ── SPY US Equity ──
+2026-04-23 18:41:14 | INFO     | ingest_intraday | [1min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:17 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987674549762500]: 36688 rows in 2599.3ms | securities=None fields=None
+2026-04-23 18:41:17 | INFO     | ingest_intraday | [1min] Received 36,688 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:17 | INFO     | ingest_intraday | [1min] Serialized 36,688 bars | 2025-12-05 14:30:00 → 2026-04-22 20:14:00 | → spy_raw_inception_1min.parquet
+2026-04-23 18:41:17 | INFO     | ingest_intraday | [2min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:18 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987677207995600]: 18448 rows in 1236.7ms | securities=None fields=None
+2026-04-23 18:41:18 | INFO     | ingest_intraday | [2min] Received 18,448 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:18 | INFO     | ingest_intraday | [2min] Serialized 18,448 bars | 2025-12-05 14:30:00 → 2026-04-22 20:14:00 | → spy_raw_inception_2min.parquet
+2026-04-23 18:41:18 | INFO     | ingest_intraday | [3min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:19 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987678482429600]: 12368 rows in 1183.5ms | securities=None fields=None
+2026-04-23 18:41:19 | INFO     | ingest_intraday | [3min] Received 12,368 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:19 | INFO     | ingest_intraday | [3min] Serialized 12,368 bars | 2025-12-05 14:30:00 → 2026-04-22 20:12:00 | → spy_raw_inception_3min.parquet
+2026-04-23 18:41:19 | INFO     | ingest_intraday | [5min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:20 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987679707920300]: 7504 rows in 600.1ms | securities=None fields=None
+2026-04-23 18:41:20 | INFO     | ingest_intraday | [5min] Received 7,504 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:20 | INFO     | ingest_intraday | [5min] Serialized 7,504 bars | 2025-12-05 14:30:00 → 2026-04-22 20:10:00 | → spy_raw_inception_5min.parquet
+2026-04-23 18:41:20 | INFO     | ingest_intraday | [10min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:20 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987680340045400]: 3839 rows in 354.0ms | securities=None fields=None
+2026-04-23 18:41:20 | INFO     | ingest_intraday | [10min] Received 3,839 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:20 | INFO     | ingest_intraday | [10min] Serialized 3,839 bars | 2025-12-05 14:30:00 → 2026-04-22 20:10:00 | → spy_raw_inception_10min.parquet
+2026-04-23 18:41:20 | INFO     | ingest_intraday | [15min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:21 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987680725495700]: 2529 rows in 311.3ms | securities=None fields=None
+2026-04-23 18:41:21 | INFO     | ingest_intraday | [15min] Received 2,529 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:21 | INFO     | ingest_intraday | [15min] Serialized 2,529 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → spy_raw_inception_15min.parquet
+2026-04-23 18:41:21 | INFO     | ingest_intraday | [30min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:23 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987681070443200]: 1313 rows in 2926.2ms | securities=None fields=None
+2026-04-23 18:41:23 | INFO     | ingest_intraday | [30min] Received 1,313 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [30min] Serialized 1,313 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → spy_raw_inception_30min.parquet
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [1h] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:24 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987684030686400]: 658 rows in 169.9ms | securities=None fields=None
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [1h] Received 658 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [1h] Serialized 658 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spy_raw_inception_1h.parquet
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [2h] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:24 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987684233436000]: 376 rows in 133.6ms | securities=None fields=None
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [2h] Received 376 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [2h] Serialized 376 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spy_raw_inception_2h.parquet
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [4h] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:24 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987684396762400]: 188 rows in 132.7ms | securities=None fields=None
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → spy_raw_inception_4h.parquet
+2026-04-23 18:41:24 | INFO     | ingest_intraday | ── QQQ US Equity ──
+2026-04-23 18:41:24 | INFO     | ingest_intraday | [1min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:27 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987684542005500]: 36678 rows in 2615.8ms | securities=None fields=None
+2026-04-23 18:41:27 | INFO     | ingest_intraday | [1min] Received 36,678 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:27 | INFO     | ingest_intraday | [1min] Serialized 36,678 bars | 2025-12-05 14:30:00 → 2026-04-22 20:29:00 | → qqq_raw_inception_1min.parquet
+2026-04-23 18:41:27 | INFO     | ingest_intraday | [2min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:28 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987687216621300]: 18438 rows in 990.2ms | securities=None fields=None
+2026-04-23 18:41:28 | INFO     | ingest_intraday | [2min] Received 18,438 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:28 | INFO     | ingest_intraday | [2min] Serialized 18,438 bars | 2025-12-05 14:30:00 → 2026-04-22 20:28:00 | → qqq_raw_inception_2min.parquet
+2026-04-23 18:41:28 | INFO     | ingest_intraday | [3min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:29 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987688248165700]: 12358 rows in 1166.9ms | securities=None fields=None
+2026-04-23 18:41:29 | INFO     | ingest_intraday | [3min] Received 12,358 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:29 | INFO     | ingest_intraday | [3min] Serialized 12,358 bars | 2025-12-05 14:30:00 → 2026-04-22 20:27:00 | → qqq_raw_inception_3min.parquet
+2026-04-23 18:41:29 | INFO     | ingest_intraday | [5min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:30 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987689451996600]: 7494 rows in 827.5ms | securities=None fields=None
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [5min] Received 7,494 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [5min] Serialized 7,494 bars | 2025-12-05 14:30:00 → 2026-04-22 20:25:00 | → qqq_raw_inception_5min.parquet
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [10min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:30 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987690312807100]: 3846 rows in 301.1ms | securities=None fields=None
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [10min] Received 3,846 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [10min] Serialized 3,846 bars | 2025-12-05 14:30:00 → 2026-04-22 20:20:00 | → qqq_raw_inception_10min.parquet
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [15min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:30 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987690650091100]: 2621 rows in 296.4ms | securities=None fields=None
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [15min] Received 2,621 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [15min] Serialized 2,621 bars | 2025-12-05 14:30:00 → 2026-04-22 20:15:00 | → qqq_raw_inception_15min.parquet
+2026-04-23 18:41:30 | INFO     | ingest_intraday | [30min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:33 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987690983095200]: 1311 rows in 3004.4ms | securities=None fields=None
+2026-04-23 18:41:33 | INFO     | ingest_intraday | [30min] Received 1,311 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [30min] Serialized 1,311 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → qqq_raw_inception_30min.parquet
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [1h] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:34 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987694025000500]: 656 rows in 141.7ms | securities=None fields=None
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [1h] Received 656 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [1h] Serialized 656 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → qqq_raw_inception_1h.parquet
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [2h] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:34 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987694196163200]: 375 rows in 153.2ms | securities=None fields=None
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [2h] Received 375 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [2h] Serialized 375 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → qqq_raw_inception_2h.parquet
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [4h] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:41:34 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987694380911200]: 188 rows in 149.2ms | securities=None fields=None
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:34 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → qqq_raw_inception_4h.parquet
+2026-04-23 18:41:34 | INFO     | ingest_intraday | ========================================================================
+2026-04-23 18:41:34 | INFO     | ingest_intraday | Intraday bar ingestion complete. All intervals serialized successfully.
+2026-04-23 18:41:34 | INFO     | ingest_intraday | ========================================================================
+2026-04-23 18:41:49 | INFO     | ingest_intraday | ========================================================================
+2026-04-23 18:41:49 | INFO     | ingest_intraday | Intraday bar ingestion pipeline started.
+2026-04-23 18:41:49 | INFO     | ingest_intraday | Bloomberg window: last 139 calendar days.
+2026-04-23 18:41:49 | INFO     | ingest_intraday | Intervals: ['1min', '2min', '3min', '5min', '10min', '15min', '30min', '1h', '2h', '4h']
+2026-04-23 18:41:49 | INFO     | ingest_intraday | Instruments: ['SPX Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:41:49 | INFO     | ingest_intraday | ========================================================================
+2026-04-23 18:41:49 | INFO     | ingest_intraday | ── SPX Index ──
+2026-04-23 18:41:49 | INFO     | ingest_intraday | [1min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:50 | INFO     | xbbg.blp | PyEngine connected to Bloomberg
+2026-04-23 18:41:52 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987710271704200]: 38361 rows in 1824.6ms | securities=None fields=None
+2026-04-23 18:41:52 | INFO     | ingest_intraday | [1min] Received 38,361 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:52 | INFO     | ingest_intraday | [1min] Serialized 38,361 bars | 2025-12-05 14:30:00 → 2026-04-22 20:19:00 | → spx_raw_inception_1min.parquet
+2026-04-23 18:41:52 | INFO     | ingest_intraday | [2min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:53 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987712246463900]: 19181 rows in 1103.3ms | securities=None fields=None
+2026-04-23 18:41:53 | INFO     | ingest_intraday | [2min] Received 19,181 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:53 | INFO     | ingest_intraday | [2min] Serialized 19,181 bars | 2025-12-05 14:30:00 → 2026-04-22 20:18:00 | → spx_raw_inception_2min.parquet
+2026-04-23 18:41:53 | INFO     | ingest_intraday | [3min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:54 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987713402647300]: 12819 rows in 862.2ms | securities=None fields=None
+2026-04-23 18:41:54 | INFO     | ingest_intraday | [3min] Received 12,819 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:54 | INFO     | ingest_intraday | [3min] Serialized 12,819 bars | 2025-12-05 14:30:00 → 2026-04-22 20:18:00 | → spx_raw_inception_3min.parquet
+2026-04-23 18:41:54 | INFO     | ingest_intraday | [5min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:54 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987714303121200]: 7673 rows in 691.9ms | securities=None fields=None
+2026-04-23 18:41:54 | INFO     | ingest_intraday | [5min] Received 7,673 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [5min] Serialized 7,673 bars | 2025-12-05 14:30:00 → 2026-04-22 20:15:00 | → spx_raw_inception_5min.parquet
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [10min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:55 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987715030590000]: 3837 rows in 421.4ms | securities=None fields=None
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [10min] Received 3,837 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [10min] Serialized 3,837 bars | 2025-12-05 14:30:00 → 2026-04-22 20:10:00 | → spx_raw_inception_10min.parquet
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [15min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:55 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987715489097900]: 2621 rows in 379.7ms | securities=None fields=None
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [15min] Received 2,621 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [15min] Serialized 2,621 bars | 2025-12-05 14:30:00 → 2026-04-22 20:15:00 | → spx_raw_inception_15min.parquet
+2026-04-23 18:41:55 | INFO     | ingest_intraday | [30min] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:56 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987715904973700]: 1311 rows in 275.9ms | securities=None fields=None
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [30min] Received 1,311 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [30min] Serialized 1,311 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → spx_raw_inception_30min.parquet
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [1h] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:56 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987716211062300]: 656 rows in 206.6ms | securities=None fields=None
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [1h] Received 656 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [1h] Serialized 656 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spx_raw_inception_1h.parquet
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [2h] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:56 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987716449351300]: 375 rows in 185.8ms | securities=None fields=None
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [2h] Received 375 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [2h] Serialized 375 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spx_raw_inception_2h.parquet
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [4h] SPX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:41:56 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987716666142800]: 188 rows in 172.4ms | securities=None fields=None
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → spx_raw_inception_4h.parquet
+2026-04-23 18:41:56 | INFO     | ingest_intraday | ── VIX Index ──
+2026-04-23 18:41:56 | INFO     | ingest_intraday | [1min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:02 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987716851848200]: 73640 rows in 6056.3ms | securities=None fields=None
+2026-04-23 18:42:02 | INFO     | ingest_intraday | [1min] Received 73,640 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:02 | INFO     | ingest_intraday | [1min] Serialized 73,640 bars | 2025-12-05 08:15:00 → 2026-04-22 20:14:00 | → vix_raw_inception_1min.parquet
+2026-04-23 18:42:02 | INFO     | ingest_intraday | [2min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:04 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987722968566700]: 36874 rows in 2013.2ms | securities=None fields=None
+2026-04-23 18:42:04 | INFO     | ingest_intraday | [2min] Received 36,874 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:05 | INFO     | ingest_intraday | [2min] Serialized 36,874 bars | 2025-12-05 08:15:00 → 2026-04-22 20:13:00 | → vix_raw_inception_2min.parquet
+2026-04-23 18:42:05 | INFO     | ingest_intraday | [3min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:06 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987725027473400]: 24615 rows in 1907.8ms | securities=None fields=None
+2026-04-23 18:42:06 | INFO     | ingest_intraday | [3min] Received 24,615 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:06 | INFO     | ingest_intraday | [3min] Serialized 24,615 bars | 2025-12-05 08:15:00 → 2026-04-22 20:12:00 | → vix_raw_inception_3min.parquet
+2026-04-23 18:42:06 | INFO     | ingest_intraday | [5min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:08 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987726984350500]: 14828 rows in 1045.8ms | securities=None fields=None
+2026-04-23 18:42:08 | INFO     | ingest_intraday | [5min] Received 14,828 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:08 | INFO     | ingest_intraday | [5min] Serialized 14,828 bars | 2025-12-05 08:15:00 → 2026-04-22 20:10:00 | → vix_raw_inception_5min.parquet
+2026-04-23 18:42:08 | INFO     | ingest_intraday | [10min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:09 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987728065724000]: 7415 rows in 985.1ms | securities=None fields=None
+2026-04-23 18:42:09 | INFO     | ingest_intraday | [10min] Received 7,415 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:09 | INFO     | ingest_intraday | [10min] Serialized 7,415 bars | 2025-12-05 08:15:00 → 2026-04-22 20:05:00 | → vix_raw_inception_10min.parquet
+2026-04-23 18:42:09 | INFO     | ingest_intraday | [15min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:09 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987729084888900]: 4945 rows in 655.2ms | securities=None fields=None
+2026-04-23 18:42:09 | INFO     | ingest_intraday | [15min] Received 4,945 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:09 | INFO     | ingest_intraday | [15min] Serialized 4,945 bars | 2025-12-05 08:15:00 → 2026-04-22 20:00:00 | → vix_raw_inception_15min.parquet
+2026-04-23 18:42:09 | INFO     | ingest_intraday | [30min] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:10 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987729773565100]: 2473 rows in 483.8ms | securities=None fields=None
+2026-04-23 18:42:10 | INFO     | ingest_intraday | [30min] Received 2,473 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:10 | INFO     | ingest_intraday | [30min] Serialized 2,473 bars | 2025-12-05 08:15:00 → 2026-04-22 19:45:00 | → vix_raw_inception_30min.parquet
+2026-04-23 18:42:10 | INFO     | ingest_intraday | [1h] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:10 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987730310906700]: 1238 rows in 457.3ms | securities=None fields=None
+2026-04-23 18:42:10 | INFO     | ingest_intraday | [1h] Received 1,238 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:10 | INFO     | ingest_intraday | [1h] Serialized 1,238 bars | 2025-12-05 08:15:00 → 2026-04-22 19:15:00 | → vix_raw_inception_1h.parquet
+2026-04-23 18:42:10 | INFO     | ingest_intraday | [2h] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:11 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987730802891700]: 667 rows in 450.6ms | securities=None fields=None
+2026-04-23 18:42:11 | INFO     | ingest_intraday | [2h] Received 667 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:11 | INFO     | ingest_intraday | [2h] Serialized 667 bars | 2025-12-05 08:15:00 → 2026-04-22 19:15:00 | → vix_raw_inception_2h.parquet
+2026-04-23 18:42:11 | INFO     | ingest_intraday | [4h] VIX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:11 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987731287850800]: 381 rows in 409.7ms | securities=None fields=None
+2026-04-23 18:42:11 | INFO     | ingest_intraday | [4h] Received 381 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:11 | INFO     | ingest_intraday | [4h] Serialized 381 bars | 2025-12-05 08:15:00 → 2026-04-22 19:15:00 | → vix_raw_inception_4h.parquet
+2026-04-23 18:42:11 | INFO     | ingest_intraday | ── NDX Index ──
+2026-04-23 18:42:11 | INFO     | ingest_intraday | [1min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:13 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987731781444100]: 40742 rows in 1770.4ms | securities=None fields=None
+2026-04-23 18:42:13 | INFO     | ingest_intraday | [1min] Received 40,742 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:13 | INFO     | ingest_intraday | [1min] Serialized 40,742 bars | 2025-12-05 14:30:00 → 2026-04-22 20:44:00 | → ndx_raw_inception_1min.parquet
+2026-04-23 18:42:13 | INFO     | ingest_intraday | [2min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:14 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987733597790100]: 20418 rows in 1379.1ms | securities=None fields=None
+2026-04-23 18:42:14 | INFO     | ingest_intraday | [2min] Received 20,418 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:15 | INFO     | ingest_intraday | [2min] Serialized 20,418 bars | 2025-12-05 14:30:00 → 2026-04-22 20:44:00 | → ndx_raw_inception_2min.parquet
+2026-04-23 18:42:15 | INFO     | ingest_intraday | [3min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:15 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987735018007300]: 13581 rows in 852.6ms | securities=None fields=None
+2026-04-23 18:42:15 | INFO     | ingest_intraday | [3min] Received 13,581 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:15 | INFO     | ingest_intraday | [3min] Serialized 13,581 bars | 2025-12-05 14:30:00 → 2026-04-22 20:42:00 | → ndx_raw_inception_3min.parquet
+2026-04-23 18:42:15 | INFO     | ingest_intraday | [5min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:16 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987735913982000]: 8149 rows in 565.7ms | securities=None fields=None
+2026-04-23 18:42:16 | INFO     | ingest_intraday | [5min] Received 8,149 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:16 | INFO     | ingest_intraday | [5min] Serialized 8,149 bars | 2025-12-05 14:30:00 → 2026-04-22 20:40:00 | → ndx_raw_inception_5min.parquet
+2026-04-23 18:42:16 | INFO     | ingest_intraday | [10min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:16 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987736515900700]: 4121 rows in 332.1ms | securities=None fields=None
+2026-04-23 18:42:16 | INFO     | ingest_intraday | [10min] Received 4,121 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:16 | INFO     | ingest_intraday | [10min] Serialized 4,121 bars | 2025-12-05 14:30:00 → 2026-04-22 20:40:00 | → ndx_raw_inception_10min.parquet
+2026-04-23 18:42:16 | INFO     | ingest_intraday | [15min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:17 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987736877632500]: 2717 rows in 293.1ms | securities=None fields=None
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [15min] Received 2,717 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [15min] Serialized 2,717 bars | 2025-12-05 14:30:00 → 2026-04-22 20:30:00 | → ndx_raw_inception_15min.parquet
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [30min] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:17 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987737206873800]: 1405 rows in 181.4ms | securities=None fields=None
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [30min] Received 1,405 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [30min] Serialized 1,405 bars | 2025-12-05 14:30:00 → 2026-04-22 20:30:00 | → ndx_raw_inception_30min.parquet
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [1h] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:17 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987737414545400]: 749 rows in 156.6ms | securities=None fields=None
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [1h] Received 749 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [1h] Serialized 749 bars | 2025-12-05 14:30:00 → 2026-04-22 20:30:00 | → ndx_raw_inception_1h.parquet
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [2h] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:17 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987737612167500]: 375 rows in 135.7ms | securities=None fields=None
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [2h] Received 375 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [2h] Serialized 375 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → ndx_raw_inception_2h.parquet
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [4h] NDX Index | 2025-12-05 → 2026-04-23 | volume_cols=False
+2026-04-23 18:42:17 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987737777955400]: 188 rows in 133.7ms | securities=None fields=None
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → ndx_raw_inception_4h.parquet
+2026-04-23 18:42:17 | INFO     | ingest_intraday | ── SPY US Equity ──
+2026-04-23 18:42:17 | INFO     | ingest_intraday | [1min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:20 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987737925036600]: 36688 rows in 2343.7ms | securities=None fields=None
+2026-04-23 18:42:20 | INFO     | ingest_intraday | [1min] Received 36,688 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:20 | INFO     | ingest_intraday | [1min] Serialized 36,688 bars | 2025-12-05 14:30:00 → 2026-04-22 20:14:00 | → spy_raw_inception_1min.parquet
+2026-04-23 18:42:20 | INFO     | ingest_intraday | [2min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:23 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987740319673500]: 18448 rows in 3643.8ms | securities=None fields=None
+2026-04-23 18:42:23 | INFO     | ingest_intraday | [2min] Received 18,448 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:24 | INFO     | ingest_intraday | [2min] Serialized 18,448 bars | 2025-12-05 14:30:00 → 2026-04-22 20:14:00 | → spy_raw_inception_2min.parquet
+2026-04-23 18:42:24 | INFO     | ingest_intraday | [3min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:27 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987744025462800]: 12368 rows in 3379.2ms | securities=None fields=None
+2026-04-23 18:42:27 | INFO     | ingest_intraday | [3min] Received 12,368 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:27 | INFO     | ingest_intraday | [3min] Serialized 12,368 bars | 2025-12-05 14:30:00 → 2026-04-22 20:12:00 | → spy_raw_inception_3min.parquet
+2026-04-23 18:42:27 | INFO     | ingest_intraday | [5min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:28 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987747446901100]: 7504 rows in 570.1ms | securities=None fields=None
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [5min] Received 7,504 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [5min] Serialized 7,504 bars | 2025-12-05 14:30:00 → 2026-04-22 20:10:00 | → spy_raw_inception_5min.parquet
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [10min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:28 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987748052380200]: 3839 rows in 292.9ms | securities=None fields=None
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [10min] Received 3,839 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [10min] Serialized 3,839 bars | 2025-12-05 14:30:00 → 2026-04-22 20:10:00 | → spy_raw_inception_10min.parquet
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [15min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:28 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987748380503100]: 2529 rows in 288.6ms | securities=None fields=None
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [15min] Received 2,529 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [15min] Serialized 2,529 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → spy_raw_inception_15min.parquet
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [30min] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:28 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987748709486900]: 1313 rows in 249.7ms | securities=None fields=None
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [30min] Received 1,313 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [30min] Serialized 1,313 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → spy_raw_inception_30min.parquet
+2026-04-23 18:42:28 | INFO     | ingest_intraday | [1h] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:29 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987748993510000]: 658 rows in 154.1ms | securities=None fields=None
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [1h] Received 658 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [1h] Serialized 658 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spy_raw_inception_1h.parquet
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [2h] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:29 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987749183010800]: 376 rows in 158.3ms | securities=None fields=None
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [2h] Received 376 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [2h] Serialized 376 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → spy_raw_inception_2h.parquet
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [4h] SPY US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:29 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987749369857300]: 188 rows in 143.5ms | securities=None fields=None
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → spy_raw_inception_4h.parquet
+2026-04-23 18:42:29 | INFO     | ingest_intraday | ── QQQ US Equity ──
+2026-04-23 18:42:29 | INFO     | ingest_intraday | [1min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:31 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987749526520100]: 36678 rows in 1768.0ms | securities=None fields=None
+2026-04-23 18:42:31 | INFO     | ingest_intraday | [1min] Received 36,678 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:31 | INFO     | ingest_intraday | [1min] Serialized 36,678 bars | 2025-12-05 14:30:00 → 2026-04-22 20:29:00 | → qqq_raw_inception_1min.parquet
+2026-04-23 18:42:31 | INFO     | ingest_intraday | [2min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:32 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987751337875300]: 18438 rows in 1643.7ms | securities=None fields=None
+2026-04-23 18:42:32 | INFO     | ingest_intraday | [2min] Received 18,438 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:33 | INFO     | ingest_intraday | [2min] Serialized 18,438 bars | 2025-12-05 14:30:00 → 2026-04-22 20:28:00 | → qqq_raw_inception_2min.parquet
+2026-04-23 18:42:33 | INFO     | ingest_intraday | [3min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:37 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987753027996500]: 12358 rows in 4298.4ms | securities=None fields=None
+2026-04-23 18:42:37 | INFO     | ingest_intraday | [3min] Received 12,358 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:37 | INFO     | ingest_intraday | [3min] Serialized 12,358 bars | 2025-12-05 14:30:00 → 2026-04-22 20:27:00 | → qqq_raw_inception_3min.parquet
+2026-04-23 18:42:37 | INFO     | ingest_intraday | [5min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:40 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987757365842100]: 7494 rows in 3515.9ms | securities=None fields=None
+2026-04-23 18:42:40 | INFO     | ingest_intraday | [5min] Received 7,494 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:40 | INFO     | ingest_intraday | [5min] Serialized 7,494 bars | 2025-12-05 14:30:00 → 2026-04-22 20:25:00 | → qqq_raw_inception_5min.parquet
+2026-04-23 18:42:40 | INFO     | ingest_intraday | [10min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:41 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987760920606100]: 3846 rows in 438.0ms | securities=None fields=None
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [10min] Received 3,846 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [10min] Serialized 3,846 bars | 2025-12-05 14:30:00 → 2026-04-22 20:20:00 | → qqq_raw_inception_10min.parquet
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [15min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:41 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987761393837500]: 2621 rows in 305.0ms | securities=None fields=None
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [15min] Received 2,621 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [15min] Serialized 2,621 bars | 2025-12-05 14:30:00 → 2026-04-22 20:15:00 | → qqq_raw_inception_15min.parquet
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [30min] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:41 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987761737281400]: 1311 rows in 178.0ms | securities=None fields=None
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [30min] Received 1,311 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [30min] Serialized 1,311 bars | 2025-12-05 14:30:00 → 2026-04-22 20:00:00 | → qqq_raw_inception_30min.parquet
+2026-04-23 18:42:41 | INFO     | ingest_intraday | [1h] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:42 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987761951075800]: 656 rows in 162.4ms | securities=None fields=None
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [1h] Received 656 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [1h] Serialized 656 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → qqq_raw_inception_1h.parquet
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [2h] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:42 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987762139043700]: 375 rows in 133.2ms | securities=None fields=None
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [2h] Received 375 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [2h] Serialized 375 bars | 2025-12-05 14:30:00 → 2026-04-22 19:30:00 | → qqq_raw_inception_2h.parquet
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [4h] QQQ US Equity | 2025-12-05 → 2026-04-23 | volume_cols=True
+2026-04-23 18:42:42 | INFO     | xbbg.blp | bloomberg //blp/refdata.IntradayBarRequest [request_id=req-1776987762302068400]: 188 rows in 128.3ms | securities=None fields=None
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [4h] Received 188 raw rows. Columns: ['ticker', 'time', 'open', 'high', 'low', 'close', 'volume', 'numEvents']
+2026-04-23 18:42:42 | INFO     | ingest_intraday | [4h] Serialized 188 bars | 2025-12-05 14:30:00 → 2026-04-22 17:30:00 | → qqq_raw_inception_4h.parquet
+2026-04-23 18:42:42 | INFO     | ingest_intraday | ========================================================================
+2026-04-23 18:42:42 | INFO     | ingest_intraday | Intraday bar ingestion complete. All intervals serialized successfully.
+2026-04-23 18:42:42 | INFO     | ingest_intraday | ========================================================================

@@ -1,0 +1,62 @@
+2026-04-23 18:40:38 | INFO     | aggregate | ========================================================================
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregation pipeline started.
+2026-04-23 18:40:38 | INFO     | aggregate | Instruments: ['SPX Index', 'SPXT Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:40:38 | INFO     | aggregate | ========================================================================
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregating SPX Index | prefix=SPX | has_ohlc=True | has_volume=False
+2026-04-23 18:40:38 | INFO     | aggregate | Loaded 24,709 daily rows from spx_raw_inception_daily.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Monthly: 1,181 periods | 1927-12-30 → 2026-04-23 | → spx_raw_inception_monthly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Yearly : 100 periods  | 1927-12-30 → 2026-04-23 | → spx_raw_inception_yearly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregating SPXT Index | prefix=SPXT | has_ohlc=False | has_volume=False
+2026-04-23 18:40:38 | INFO     | aggregate | Loaded 9,226 daily rows from spxt_raw_inception_daily.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Monthly: 440 periods | 1989-09-29 → 2026-04-23 | → spxt_raw_inception_monthly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Yearly : 38 periods  | 1989-12-29 → 2026-04-23 | → spxt_raw_inception_yearly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregating VIX Index | prefix=VIX | has_ohlc=True | has_volume=False
+2026-04-23 18:40:38 | INFO     | aggregate | Loaded 9,170 daily rows from vix_raw_inception_daily.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Monthly: 436 periods | 1990-01-31 → 2026-04-23 | → vix_raw_inception_monthly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Yearly : 37 periods  | 1990-12-31 → 2026-04-23 | → vix_raw_inception_yearly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregating NDX Index | prefix=NDX | has_ohlc=True | has_volume=False
+2026-04-23 18:40:38 | INFO     | aggregate | Loaded 10,385 daily rows from ndx_raw_inception_daily.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Monthly: 495 periods | 1985-02-28 → 2026-04-23 | → ndx_raw_inception_monthly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Yearly : 42 periods  | 1985-12-31 → 2026-04-23 | → ndx_raw_inception_yearly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregating SPY US Equity | prefix=SPY | has_ohlc=True | has_volume=True
+2026-04-23 18:40:38 | INFO     | aggregate | Loaded 8,365 daily rows from spy_raw_inception_daily.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Monthly: 400 periods | 1993-01-29 → 2026-04-23 | → spy_raw_inception_monthly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Yearly : 34 periods  | 1993-12-31 → 2026-04-23 | → spy_raw_inception_yearly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregating QQQ US Equity | prefix=QQQ | has_ohlc=True | has_volume=True
+2026-04-23 18:40:38 | INFO     | aggregate | Loaded 6,823 daily rows from qqq_raw_inception_daily.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Monthly: 326 periods | 1999-03-31 → 2026-04-23 | → qqq_raw_inception_monthly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | Yearly : 28 periods  | 1999-12-31 → 2026-04-23 | → qqq_raw_inception_yearly.parquet
+2026-04-23 18:40:38 | INFO     | aggregate | ========================================================================
+2026-04-23 18:40:38 | INFO     | aggregate | Aggregation complete. All instruments serialized successfully.
+2026-04-23 18:40:38 | INFO     | aggregate | ========================================================================
+2026-04-23 18:41:48 | INFO     | aggregate | ========================================================================
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregation pipeline started.
+2026-04-23 18:41:48 | INFO     | aggregate | Instruments: ['SPX Index', 'SPXT Index', 'VIX Index', 'NDX Index', 'SPY US Equity', 'QQQ US Equity']
+2026-04-23 18:41:48 | INFO     | aggregate | ========================================================================
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregating SPX Index | prefix=SPX | has_ohlc=True | has_volume=False
+2026-04-23 18:41:48 | INFO     | aggregate | Loaded 24,709 daily rows from spx_raw_inception_daily.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Monthly: 1,181 periods | 1927-12-30 → 2026-04-23 | → spx_raw_inception_monthly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Yearly : 100 periods  | 1927-12-30 → 2026-04-23 | → spx_raw_inception_yearly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregating SPXT Index | prefix=SPXT | has_ohlc=False | has_volume=False
+2026-04-23 18:41:48 | INFO     | aggregate | Loaded 9,226 daily rows from spxt_raw_inception_daily.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Monthly: 440 periods | 1989-09-29 → 2026-04-23 | → spxt_raw_inception_monthly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Yearly : 38 periods  | 1989-12-29 → 2026-04-23 | → spxt_raw_inception_yearly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregating VIX Index | prefix=VIX | has_ohlc=True | has_volume=False
+2026-04-23 18:41:48 | INFO     | aggregate | Loaded 9,170 daily rows from vix_raw_inception_daily.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Monthly: 436 periods | 1990-01-31 → 2026-04-23 | → vix_raw_inception_monthly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Yearly : 37 periods  | 1990-12-31 → 2026-04-23 | → vix_raw_inception_yearly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregating NDX Index | prefix=NDX | has_ohlc=True | has_volume=False
+2026-04-23 18:41:48 | INFO     | aggregate | Loaded 10,385 daily rows from ndx_raw_inception_daily.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Monthly: 495 periods | 1985-02-28 → 2026-04-23 | → ndx_raw_inception_monthly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Yearly : 42 periods  | 1985-12-31 → 2026-04-23 | → ndx_raw_inception_yearly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregating SPY US Equity | prefix=SPY | has_ohlc=True | has_volume=True
+2026-04-23 18:41:48 | INFO     | aggregate | Loaded 8,365 daily rows from spy_raw_inception_daily.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Monthly: 400 periods | 1993-01-29 → 2026-04-23 | → spy_raw_inception_monthly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Yearly : 34 periods  | 1993-12-31 → 2026-04-23 | → spy_raw_inception_yearly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregating QQQ US Equity | prefix=QQQ | has_ohlc=True | has_volume=True
+2026-04-23 18:41:48 | INFO     | aggregate | Loaded 6,823 daily rows from qqq_raw_inception_daily.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Monthly: 326 periods | 1999-03-31 → 2026-04-23 | → qqq_raw_inception_monthly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | Yearly : 28 periods  | 1999-12-31 → 2026-04-23 | → qqq_raw_inception_yearly.parquet
+2026-04-23 18:41:48 | INFO     | aggregate | ========================================================================
+2026-04-23 18:41:48 | INFO     | aggregate | Aggregation complete. All instruments serialized successfully.
+2026-04-23 18:41:48 | INFO     | aggregate | ========================================================================

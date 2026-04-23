@@ -1,0 +1,60 @@
+2026-04-23 18:39:48 | INFO     | pipeline | ========================================================================
+2026-04-23 18:39:48 | INFO     | pipeline | Bloomberg Data Lake Pipeline — Full Run
+2026-04-23 18:39:48 | INFO     | pipeline | Skip tick ingestion: False
+2026-04-23 18:39:48 | INFO     | pipeline | ========================================================================
+2026-04-23 18:39:48 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:39:48 | INFO     | pipeline | Starting stage: Daily Ingestion
+2026-04-23 18:39:48 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest.py
+2026-04-23 18:39:48 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:40:37 | INFO     | pipeline | Stage 'Daily Ingestion' completed successfully. Exit code: 0
+2026-04-23 18:40:37 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:40:37 | INFO     | pipeline | Starting stage: Monthly & Yearly Aggregation
+2026-04-23 18:40:37 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\aggregate.py
+2026-04-23 18:40:37 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:40:38 | INFO     | pipeline | Stage 'Monthly & Yearly Aggregation' completed successfully. Exit code: 0
+2026-04-23 18:40:38 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:40:38 | INFO     | pipeline | Starting stage: Intraday Bar Ingestion
+2026-04-23 18:40:38 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_intraday.py
+2026-04-23 18:40:38 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:34 | INFO     | pipeline | Stage 'Intraday Bar Ingestion' completed successfully. Exit code: 0
+2026-04-23 18:41:34 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:34 | INFO     | pipeline | Starting stage: Raw Tick Ingestion
+2026-04-23 18:41:34 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_tick.py
+2026-04-23 18:41:34 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:36 | INFO     | pipeline | Stage 'Raw Tick Ingestion' completed successfully. Exit code: 0
+2026-04-23 18:41:36 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:36 | INFO     | pipeline | Starting stage: Full Validation
+2026-04-23 18:41:36 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\validator.py
+2026-04-23 18:41:36 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:38 | INFO     | pipeline | Stage 'Full Validation' completed successfully. Exit code: 0
+2026-04-23 18:41:38 | INFO     | pipeline | ========================================================================
+2026-04-23 18:41:38 | INFO     | pipeline | Pipeline complete. All stages passed.
+2026-04-23 18:41:38 | INFO     | pipeline | ========================================================================
+2026-04-23 18:41:38 | INFO     | pipeline | ========================================================================
+2026-04-23 18:41:38 | INFO     | pipeline | Bloomberg Data Lake Pipeline — Full Run
+2026-04-23 18:41:38 | INFO     | pipeline | Skip tick ingestion: True
+2026-04-23 18:41:38 | INFO     | pipeline | ========================================================================
+2026-04-23 18:41:38 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:38 | INFO     | pipeline | Starting stage: Daily Ingestion
+2026-04-23 18:41:38 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest.py
+2026-04-23 18:41:38 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:47 | INFO     | pipeline | Stage 'Daily Ingestion' completed successfully. Exit code: 0
+2026-04-23 18:41:47 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:47 | INFO     | pipeline | Starting stage: Monthly & Yearly Aggregation
+2026-04-23 18:41:47 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\aggregate.py
+2026-04-23 18:41:47 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:48 | INFO     | pipeline | Stage 'Monthly & Yearly Aggregation' completed successfully. Exit code: 0
+2026-04-23 18:41:48 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:41:48 | INFO     | pipeline | Starting stage: Intraday Bar Ingestion
+2026-04-23 18:41:48 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\ingest_intraday.py
+2026-04-23 18:41:48 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:42:42 | INFO     | pipeline | Stage 'Intraday Bar Ingestion' completed successfully. Exit code: 0
+2026-04-23 18:42:42 | INFO     | pipeline | Stage 4 (Tick Ingestion) skipped via --skip-tick flag.
+2026-04-23 18:42:42 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:42:42 | INFO     | pipeline | Starting stage: Full Validation
+2026-04-23 18:42:42 | INFO     | pipeline | Script        : C:\Users\gorazd.atanasovski\Desktop\Data\src\validator.py
+2026-04-23 18:42:42 | INFO     | pipeline | ────────────────────────────────────────────────────────────
+2026-04-23 18:42:44 | INFO     | pipeline | Stage 'Full Validation' completed successfully. Exit code: 0
+2026-04-23 18:42:44 | INFO     | pipeline | ========================================================================
+2026-04-23 18:42:44 | INFO     | pipeline | Pipeline complete. All stages passed.
+2026-04-23 18:42:44 | INFO     | pipeline | ========================================================================
